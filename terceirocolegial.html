@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Terceiro Colegial</title>
+	</head>
+	<style media="screen">
+		body{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-family: sans-serif;
+			background-image: linear-gradient(120deg,#ff6803, #0026ff);
+			min-height: 100vh;
+		}
+		div{
+			width: 500px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-color: #fff;
+			transform: translate(-50%, -50%);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 1px 1px 20px #ee5253;
+		}
+		h2{
+			font-size: 45px;
+			font-weight: 600;
+			line-height: 1.0;
+		}
+		h3{
+			font-size: 30px;
+			font-weight: 600;
+			line-height: 0;
+			line-height: 1;
+			color: dodgerblue;
+
+		}
+		p{
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 0;
+			
+
+		}
+		.text{
+			text-align: left;
+			margin-left: 150px;
+		}
+		#d, #o, #t, #s{
+			color: #222f3e;
+			text-align: left;
+			font-size: 20px;
+			font-weight: 200;
+			outline: none;
+			border: none;
+			background: none;
+			border-bottom: 1px solid #341f97;
+			width: 200px;
+		}
+		#d:focus, #o:focus, #t:focus, #s:focus{
+				border-bottom: 2px solid #341f97;
+				width: 300px;
+				transition: 0.5s;
+			}
+		#result{
+				color: #341f97;
+			}
+		#btn{
+				font-family: inherit;
+				zoom: 150%;
+				margin-top: 10px;
+				border: none;
+				color: #fff;
+				background-image: linear-gradient(120deg,#ff6b6b, #5f27cd);
+				width: 150px;
+				padding: 10px;
+				border-radius: 30px;
+				outline: none;
+				cursor: pointer;
+			}
+			#btn:hover{
+				box-shadow: 1px 1px 10px #341f97;
+			}
+			#info{
+				font-size: 12px;
+				font-family: inherit;
+			}
+			#info2{ 
+				font-size: 12px;
+				zoom: 110%;
+				font-family: inherit;
+				color: #ee5253;
+			}
+			#voltar{
+				font-family: inherit;
+				zoom: 150%;
+				margin-top: 10px;
+				border: none;
+				color: #fff;
+				background-color: cornflowerblue;
+				width: 70px;
+				padding: 10px;
+				border-radius: 30px;
+				outline: none;
+				cursor: pointer;
+			}
+			#voltar:hover{
+				box-shadow: 1px 1px 10px #341f97;
+			}
+
+
+	</style>
+	<script type="text/javascript">
+		function BMI() {
+			var d=document.getElementById('d').value;
+			var o=document.getElementById('o').value;
+            
+            var s=document.getElementById('s').value;
+			var bmi=(((1*o)+(2*d))/3)+1*s;
+			var bmio=(bmi.toFixed(2));
+
+			document.getElementById("result").innerHTML="Sua média é " + bmio;
+		}
+	</script>
+	<body>
+		<div>
+			<h2>Calculadora de média</h2>
+			<h3>~ 3º Colegial ~</h3>
+			<p class="text">Discursiva (0 a 10)</p>
+			<input type="text" id="d">
+			<p class="text">Simulado Einstein (0 a 10)</p>
+			<input type="text" id="o">
+            
+            <p class="text">Simulado Anglo (0.0 a 1.0)</p>
+			<input type="text" id="s">
+
+
+			<p id="result"></p>
+			<p id="info2">*Use ponto (.) não use vírgula (,)</p>
+			<button id="btn" onClick="BMI()">Calcular</button>
+			<br>
+			<input id="voltar" type='button' value='Voltar' onclick='history.go(-1)' />
+			<hr>
+			<p id="info">Prof. Victor C.</p>
+		</div>
+	</body>
+</html>
